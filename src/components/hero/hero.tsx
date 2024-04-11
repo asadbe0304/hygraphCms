@@ -10,7 +10,7 @@ const hero = ({ blogs }: HeroProps) => {
 
   return (
     <>
-      <Box width={'100%'} height={'90vh'} sx={{}}>
+      <Box width={'100%'} height={'90vh'} sx={{marginTop:"20px", marginBottom:"20px"}}>
         <Carousel
           infinite={true}
           showDots={true}
@@ -26,8 +26,8 @@ const hero = ({ blogs }: HeroProps) => {
         >
           {
             blogs.map(item => (
-              <Box key={item.id} sx={{ position: "relative", width: "100%", height: "90vh" }}>
-                <Image src={item.image.url} priority={true} alt={item.title} fill style={{ objectFit: 'cover', zIndex: 99 }} />
+              <Box key={item.id} sx={{display:"flex", gap:"10px", position: "relative", borderRadius:"10px", width: "98%", height: "90vh" }}>
+                <Image src={item.image.url} priority={true} alt={item.title} fill style={{ objectFit: 'cover', borderRadius:"10px",marginRight:"10px", marginLeft:"10px", zIndex: 99 }} />
                 <Link href={`blog/${item.slug}`} >
                   <Box sx={{
                     position: 'absolute',
@@ -39,11 +39,11 @@ const hero = ({ blogs }: HeroProps) => {
                     height: '100%',
                     background: 'rgb(0,0,0, 0.5)',
                   }}>
-                    <Box width={{ xs: '100%', xl: '70%' }} position={'relative'} sx={{ top: '50%', transform: 'translateY(-50%)', paddingLeft: { xs: '10px', md: '50px' } }} color={'#ededed'} zIndex={999}>
-                      <Typography variant='h5' sx={{ fontSize: { xs: '30px', md: '50px', color: '#fff' } }}>
+                    <Box width={{ xs: '100%', xl: '70%' }} position={'relative'} sx={{ top: '50%', transform: 'translateY(-50%)', paddingLeft: { xs: '10px', md: '50px' } }} color={'#3B82F6'} zIndex={999}>
+                      <Typography variant='h5' sx={{ fontSize: { xs: '30px', md: '50px', color: '#3B82F6' } }}>
                         {item.title}
                       </Typography>
-                      <Typography variant='h5' sx={{ fontSize: { xs: '25px', md: '30px', color: '#999' } }}>
+                      <Typography variant='h5' sx={{ fontSize: { xs: '25px', md: '30px', color: '#3882Ff' } }}>
                         {item.excerpt}
                       </Typography>
                       <Box sx={{ display: 'flex', alignItems: 'flex-start', marginTop: '20px', gap: '10px' }}>

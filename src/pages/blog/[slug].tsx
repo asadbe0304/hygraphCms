@@ -32,7 +32,7 @@ export default function DetailedBlog({ blogs }: DetailedBlogsPageProps) {
           >
             <Image src={blogs.image.url} alt={blogs.title} fill style={{ objectFit: 'cover', borderRadius: '10px' }} />
           </Box>
-          <Box display={'flex'} flexDirection={'column'} rowGap={'10px'} sx={{ border: '1px solid #7000FF', background: '#2A2B33', padding: '10px', borderRadius: '8px', boxShadow: '0px 8px 16px rgba(255, 255, 255, .1)', }}>
+          <Box display={'flex'} flexDirection={'column'} rowGap={'10px'} sx={{ background: '#041722', padding: '10px', borderRadius: '8px', boxShadow: '0px 8px 16px rgba(255, 255, 255, .1)', }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '20px' }}>
               <Avatar alt={blogs.asadbek} src={blogs.profile.url} />
               <Box>
