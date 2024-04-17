@@ -15,10 +15,11 @@ export interface BlogType {
     html: string;
     text: string;
   };
-  
+
   createdAt: string;
   asadbek: string;
   profile: {
     url: string;
   };
+  loading: boolean;
 }
