@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import { MdFacebook, MdWhatsapp, MdMessage } from "react-icons/md";
 import Link from '@mui/material/Link';
-import Logo from "./../../assets/s.png";
+import Logo from "./../../assets/db.jpg";
 import Image from 'next/image';
 
 function Copyright() {
@@ -34,7 +34,8 @@ export default function StickyFooter() {
           <Image
             src={Logo}
             width={40}
-            height={45}
+            height={40}
+            className='img'
             alt="Picture of the logo"
           />
         </Box>

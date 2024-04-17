@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 import { FcMenu } from 'react-icons/fc';
 import NavItems from './../../config/constants';
-import Logo from './../../assets/s.png';
+import Logo from './../../assets/db.jpg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
@@ -38,17 +38,21 @@ export default function Navbar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', background: "#041722", color: "#7000FF" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <Image
-          src={Logo}
-          width={40}
-          height={40}
-          priority={true}
-          alt="Picture of the author"
-        />
+        <Link href={'/'}>
+          <Image
+            src={Logo}
+            width={40}
+            height={40}
+            // sx={{borderRadius:"50%"}}
+            // priority={true}
+            className='img'
+            alt="Picture of the author"
+          />
+        </Link>
       </Typography>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.route}  onClick={() => router.push(`${item.route}`)} disablePadding>
+          <ListItem key={item.route} onClick={() => router.push(`${item.route}`)} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item.label} />
             </ListItemButton>
@@ -78,12 +82,15 @@ export default function Navbar(props: Props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <Image
-              src={Logo}
-              width={40}
-              height={45}
-              alt="Picture of the author"
-            />
+            <Link href="/">
+              <Image
+                src={Logo}
+                width={40}
+                height={40}
+                className='img'
+                alt="Picture of the author"
+              />
+            </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' }, color: '#7000FF' }}>
             {navItems.map((item) => (

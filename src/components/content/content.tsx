@@ -31,7 +31,7 @@ export default function Content({ blogs }: ContentProps) {
         {
           blogs.map((e) => {
             return (
-              <Box key={e.title} sx={{ padding: '10px', margin: '0px', marginTop: '0px', borderRadius: '4px', background: "#041722",  width: '100%' }}
+              <Box key={e.title} sx={{ padding: '10px', margin: '0px', marginTop: '0px', borderRadius: '4px', background: "#041722", width: '100%' }}
               >
                 <Box
                   // href={`blog/${e.slug}`} 
@@ -52,7 +52,7 @@ export default function Content({ blogs }: ContentProps) {
                       <Typography variant='subtitle1' color={'#ededed'}>
                         {e.asadbek}
                       </Typography>
-                      <Box color={'#7000FF'} sx={{fontSize:'14px'}}>
+                      <Box color={'#7000FF'} sx={{ fontSize: '14px' }}>
                         {e.createdAt.slice(0, 10)} {calculatedEstimatedTime(e.desciption.text)} min read
                       </Box>
                     </Box>
@@ -64,8 +64,8 @@ export default function Content({ blogs }: ContentProps) {
                       </Button>
                     </Tooltip>
                     <Tooltip title={`${copied ? "Copied" : 'Copy Url'}`}>
-                      <Button variant={'contained'} sx={{background:'#7000FF'}}>
-                        <MdLink onClick={copyToClipboard} style={{ cursor: 'pointer', width: '24px', height: '24px' }} />
+                      <Button variant={'contained'} onClick={copyToClipboard} sx={{ background: '#7000FF' }}>
+                        <MdLink style={{ cursor: 'pointer', width: '24px', height: '24px' }} />
                       </Button>
                     </Tooltip>
                   </Box>
